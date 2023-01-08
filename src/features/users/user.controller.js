@@ -86,7 +86,7 @@ const loginUser = async ({ email, password }) => {
       };
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return {
       message: "Something went wrong",
       desc: "Invalid credentials",

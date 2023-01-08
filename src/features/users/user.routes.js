@@ -65,7 +65,7 @@ userRoute.put("/resetpassword", async (req, res) => {
     email,
     password,
   });
-  console.log(message, desc, updatedUser);
+  // console.log(message, desc, updatedUser);
 
   if (message != "OK") {
     return res.status(401).send({ message: desc });

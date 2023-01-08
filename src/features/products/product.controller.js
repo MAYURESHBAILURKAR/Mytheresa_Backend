@@ -42,7 +42,7 @@ const getProducts = async ({
     if (!page) {
       page = 1;
     }
-    console.log(query);
+    // console.log(query);
     const products = await ProductModel.find(query)
       .sort({ [orderBy]: sort === "asc" ? 1 : sort === "desc" ? -1 : 0 })
       .limit(+limit)
