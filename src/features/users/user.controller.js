@@ -100,15 +100,15 @@ const authCheck = async ({ token }) => {
     if (token) {
       const decoded = jwt.verify(token, process.env.signToken);
       // console.log(decoded);
-      let id = decoded.id;
-      const getUser = await UserModel.findOne({ id });
+      let _id = decoded.id;
+      const getUser = await UserModel.findOne({ _id });
       if (getUser) {
         return {
           isAuth: true,
           message: "OK",
           desc: "Authenticated Successfull",
           userDetails: {
-            id: getUser._id,
+            id: getUser.id,
             name: getUser.name,
             gender: getUser.gender,
             role: getUser.role,
